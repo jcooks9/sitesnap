@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Successful — SiteSnap</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #F7F6F3; font-family: 'DM Sans', sans-serif; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; }
+  .card { background: #fff; border: 1.5px solid #EEEBE5; border-radius: 16px; padding: 48px 40px; max-width: 480px; width: 100%; text-align: center; box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
+  .icon { font-size: 64px; margin-bottom: 24px; }
+  h1 { font-family: 'Bebas Neue', sans-serif; font-size: 36px; letter-spacing: 2px; color: #1A1A18; margin-bottom: 12px; }
+  p { font-size: 15px; color: #888; line-height: 1.6; margin-bottom: 8px; }
+  .plan-badge { display: inline-block; background: #E8F5EC; color: #0F6E56; font-size: 13px; font-weight: 600; padding: 6px 16px; border-radius: 20px; margin: 16px 0 28px; }
+  .btn { display: inline-block; background: #E8570A; color: #fff; text-decoration: none; border-radius: 8px; padding: 14px 32px; font-size: 15px; font-weight: 600; transition: all 0.2s; }
+  .btn:hover { background: #FF6820; transform: translateY(-2px); }
+  .divider { height: 1px; background: #EEEBE5; margin: 28px 0; }
+  .detail { font-size: 13px; color: #AAA; margin-bottom: 6px; }
+  .detail strong { color: #1A1A18; }
+  @keyframes popIn { from { opacity:0; transform: scale(0.9); } to { opacity:1; transform: scale(1); } }
+  .card { animation: popIn 0.4s ease; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="icon">🎉</div>
+  <h1>YOU'RE ALL SET!</h1>
+  <p>Welcome to SiteSnap. Your payment was successful and your account has been upgraded.</p>
+
+  <div class="plan-badge" id="plan-name">Pro Plan</div>
+
+  <div class="divider"></div>
+
+  <div class="detail">A receipt has been sent to your email</div>
+  <div class="detail">Your plan is <strong>active immediately</strong></div>
+  <div class="detail">Questions? Email <strong>support@sitesnap.tech</strong></div>
+
+  <div class="divider"></div>
+
+  <a href="/" class="btn">Go to SiteSnap →</a>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const plan = params.get('plan');
+  const names = {
+    pro_monthly: '⚡ Pro Plan — $29/month',
+    team_annual: '👥 Team Plan — $299/year',
+    company_annual: '🏢 Company Plan — $499/year',
+  };
+  if (plan && names[plan]) {
+    document.getElementById('plan-name').textContent = names[plan];
+  }
+</script>
+</body>
+</html>
