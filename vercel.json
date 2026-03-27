@@ -3,10 +3,3 @@
     { "source": "/(.*)", "destination": "/sitesnap-mockup (1).html" }
   ]
 }
-```
-
----
-
-**Commit message:**
-```
-Fix routing for sitesnap.tech domain
