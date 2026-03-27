@@ -1,12 +1,5 @@
-{ "source": "/(.*)", "destination": "/sitesnap-mockup.html" }
-```
-
-Commit message: `Fix routing to sitesnap-mockup.html`
-
----
-
-**Step 2 — Rename the HTML file**
-
-Go back to your repo → click on `sitesnap-mockup (1).html` → click pencil edit icon → at the top where it shows the filename, change it to:
-```
-sitesnap-mockup.html
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/sitesnap-mockup.html" }
+  ]
+}
