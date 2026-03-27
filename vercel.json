@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/sitesnap-mockup.html" }
+    { "source": "/(.*)", "destination": "/sitesnap-mockup(7).html" }
   ]
 }
